@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class JavaTypes {
-	
+
 	public JavaTypes () {
 		System.out.println("JavaTypes::JavaTypes()");
 	}

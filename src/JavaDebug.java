@@ -1,6 +1,6 @@
 
 public class JavaDebug {
-	
+
 	public JavaDebug () {
 		System.out.println("JavaTypes::JavaDebug()");
 	}

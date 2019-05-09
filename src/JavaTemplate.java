@@ -1,6 +1,6 @@
 
 public class JavaTemplate {
-	
+
 	public JavaTemplate () {
 		System.out.println("JavaTemplate::JavaTemplate()");
 	}
