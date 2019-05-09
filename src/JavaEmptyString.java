@@ -21,6 +21,8 @@ public class JavaEmptyString {
 		// This is Okay
 		if (s1.isEmpty()) {
 			System.out.println("s1 is empty");
+		} else {
+			System.out.println("s1 is not empty");
 		}
 		
 		// This is Wrong
@@ -50,6 +52,8 @@ public class JavaEmptyString {
 		// This is Okay
 		if (s2.isEmpty()) {
 			System.out.println("s2 is empty");
+		} else {
+			System.out.println("s2 is not empty");
 		}
 		
 		// This is Wrong
