@@ -1,15 +1,15 @@
 
-public class JavaUser {
+public class User {
 
 	private String mText;
 	private int mVal;
 	
-	public JavaUser() {
-		System.out.println(this.getClass().getName() + "()");
+	public User() {
+		System.out.println("User::User()");
 	}
 
-	public JavaUser(String pText, int pVal) {
-		System.out.println(this.getClass().getName() + "() pText=" + pText + " pVal=" + pVal);
+	public User(String pText, int pVal) {
+		System.out.println("User::User() pText=" + pText + " pVal=" + pVal);
 
 		mText = pText;
 		mVal = pVal;

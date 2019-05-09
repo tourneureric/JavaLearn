@@ -5,12 +5,12 @@ public class JavaDebug {
 		System.out.println("JavaTypes::JavaDebug()");
 	}
 
-	public void javaDebug() {
+	public void main() {
 
-		System.out.println(this.getClass().getName() + "()");
+		System.out.println(this.getClass().getName() + "::" + new Object() {}.getClass().getEnclosingMethod().getName() + "()");
 		
-		JavaUser ju1 = new JavaUser("moi", 1);
-		JavaUser ju2 = new JavaUser("toi", 2);
+		User ju1 = new User("moi", 1);
+		User ju2 = new User("toi", 2);
 		
 		System.out.println(this.getClass().getName() + "() ju1.getText() = " + ju1.getText());
 		System.out.println(this.getClass().getName() + "() ju1.getVal() = " + ju1.getVal());
@@ -20,7 +20,6 @@ public class JavaDebug {
 		
 		System.out.println(this.getClass().getName() + "() ju2.getText() = " + ju2.getText());
 		System.out.println(this.getClass().getName() + "() ju2.getVal() = " + ju2.getVal());
-
 
 	}
 

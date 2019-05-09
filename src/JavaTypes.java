@@ -9,8 +9,8 @@ public class JavaTypes {
 		System.out.println("JavaTypes::JavaTypes()");
 	}
 
-	public void javaTypes() {
-		System.out.println(this.getClass().getName() + "()");
+	public void main() {
+		System.out.println("JavaTypes::main()");
 
 		List<String> myArrayListOfString1 = new ArrayList<String>();
 		myArrayListOfString1.add("réponse 1");
