@@ -6,7 +6,6 @@ public class JavaLearn {
 	private static boolean onJavaTest = false;
 	private static boolean onJavaEmptyString = true;
 
-
 	public static void main(String[] args) {
 		
 		if (onJavaTypes) {
