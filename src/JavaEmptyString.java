@@ -5,6 +5,7 @@ public class JavaEmptyString {
 		System.out.println("JavaEmptyString::JavaEmptyString()");
 	}
 
+	@SuppressWarnings("unused")
 	public void main() {
 		System.out.println("JavaEmptyString::main()");
 		System.out.println("");
@@ -66,6 +67,40 @@ public class JavaEmptyString {
 			System.out.println("	&&	(s2 == \"\") false");
 		}
 		System.out.println("");
+		
+		System.out.println("User u1 =  new User(\"\", -1)");
+		User u1 =  new User("", -1);
+		String s3 = u1.getText();
+		System.out.println("		s3 = u1.getText() = '" + s3 + "'");
+		if (s3.equals("")) {
+			System.out.println("		(s3.equals(\"\")) true");
+		} else {
+			System.out.println("		(s3.equals(\"\") false");
+		}
+		if (s3.isEmpty()) {
+			System.out.println("		(s3.isEmpty()) true");
+		} else {
+			System.out.println("		(s3.isEmpty()) false");
+		}
+		System.out.println("");
+
+		
+		System.out.println("User u2 =  new User(null, -1)");
+		User u2 =  new User(null, -1);
+		String s4 = u1.getText();
+		System.out.println("		s4 = u2.getText() = '" + s3 + "'");
+		if (s4.equals("")) {
+			System.out.println("		(s4.equals(\"\")) true");
+		} else {
+			System.out.println("		(s4.equals(\"\") false");
+		}
+		if (s4.isEmpty()) {
+			System.out.println("		(s4.isEmpty()) true");
+		} else {
+			System.out.println("		(s4.isEmpty()) false");
+		}
+		System.out.println("");
+
 
 	}
 	
