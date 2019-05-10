@@ -101,7 +101,6 @@ public class JavaEmptyString {
 		}
 		System.out.println("");
 
-
 	}
 	
 }
