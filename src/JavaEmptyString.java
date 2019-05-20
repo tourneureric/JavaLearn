@@ -2,12 +2,16 @@
 public class JavaEmptyString {
 
 	public JavaEmptyString () {
+		
 		System.out.println("JavaEmptyString::JavaEmptyString()");
+		
 	}
 
 	@SuppressWarnings("unused")
 	public void main() {
-		System.out.println("JavaEmptyString::main()");
+		
+		System.out.println("JavaEmptyString::main() [begin]");
+		
 		System.out.println("");
 
 		String s1 = new String("");
@@ -100,6 +104,8 @@ public class JavaEmptyString {
 			System.out.println("		(s4.isEmpty()) false");
 		}
 		System.out.println("");
+		
+		System.out.println("JavaEmptyString::main() [end]");
 
 	}
 	

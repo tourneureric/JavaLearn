@@ -2,10 +2,14 @@
 public class JavaDebug {
 
 	public JavaDebug () {
+		
 		System.out.println("JavaTypes::JavaDebug()");
+		
 	}
 
 	public void main() {
+		
+		System.out.println("JavaDebug::main() [begin]");
 
 		System.out.println(this.getClass().getName() + "::" + new Object() {}.getClass().getEnclosingMethod().getName() + "()");
 		
@@ -20,6 +24,8 @@ public class JavaDebug {
 		
 		System.out.println(this.getClass().getName() + "() ju2.getText() = " + ju2.getText());
 		System.out.println(this.getClass().getName() + "() ju2.getVal() = " + ju2.getVal());
+		
+		System.out.println("JavaDebug::main() [end]");
 
 	}
 

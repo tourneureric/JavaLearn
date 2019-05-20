@@ -6,12 +6,15 @@ import java.util.List;
 public class JavaTypes {
 
 	public JavaTypes () {
+		
 		System.out.println("JavaTypes::JavaTypes()");
+		
 	}
 
 	public void main() {
-		System.out.println("JavaTypes::main()");
-
+		
+		System.out.println("JavaTypes::main() [begin]");
+				
 		List<String> myArrayListOfString1 = new ArrayList<String>();
 		myArrayListOfString1.add("réponse 1");
 		myArrayListOfString1.add("réponse 2");
@@ -27,6 +30,8 @@ public class JavaTypes {
 			System.out.println(++i + " : " + str);
 		}
 		System.out.println("myArrayListOfString2.size = " + myArrayListOfString2.size());
+		
+		System.out.println("JavaTypes::main() [end]");
 
 	}
 
