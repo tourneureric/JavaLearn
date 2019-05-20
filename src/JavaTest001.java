@@ -3,17 +3,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class JavaTypes {
+public class JavaTest001 {
 
-	public JavaTypes () {
+	public JavaTest001 () {
 		
-		System.out.println("JavaTypes::JavaTypes()");
+		System.out.println("JavaTest001::JavaTest001()");
 		
 	}
 
 	public void main() {
 		
-		System.out.println("JavaTypes::main() [begin]");
+		System.out.println("JavaTest001::main() [begin]");
 				
 		List<String> myArrayListOfString1 = new ArrayList<String>();
 		myArrayListOfString1.add("réponse 1");
@@ -31,7 +31,7 @@ public class JavaTypes {
 		}
 		System.out.println("myArrayListOfString2.size = " + myArrayListOfString2.size());
 		
-		System.out.println("JavaTypes::main() [end]");
+		System.out.println("JavaTest001::main() [end]");
 
 	}
 

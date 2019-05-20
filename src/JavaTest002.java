@@ -1,16 +1,16 @@
 
-public class JavaEmptyString {
+public class JavaTest002 {
 
-	public JavaEmptyString () {
+	public JavaTest002 () {
 		
-		System.out.println("JavaEmptyString::JavaEmptyString()");
+		System.out.println("JavaTest002::JavaTest002()");
 		
 	}
 
 	@SuppressWarnings("unused")
 	public void main() {
 		
-		System.out.println("JavaEmptyString::main() [begin]");
+		System.out.println("JavaTest002::main() [begin]");
 		
 		System.out.println("");
 
@@ -105,7 +105,7 @@ public class JavaEmptyString {
 		}
 		System.out.println("");
 		
-		System.out.println("JavaEmptyString::main() [end]");
+		System.out.println("JavaTest002::main() [end]");
 
 	}
 	

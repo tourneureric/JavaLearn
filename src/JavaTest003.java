@@ -1,15 +1,15 @@
 
-public class JavaDebug {
+public class JavaTest003 {
 
-	public JavaDebug () {
+	public JavaTest003 () {
 		
-		System.out.println("JavaTypes::JavaDebug()");
+		System.out.println("JavaTest003::JavaTest003()");
 		
 	}
 
 	public void main() {
 		
-		System.out.println("JavaDebug::main() [begin]");
+		System.out.println("JavaTest003::main() [begin]");
 
 		System.out.println(this.getClass().getName() + "::" + new Object() {}.getClass().getEnclosingMethod().getName() + "()");
 		
@@ -25,7 +25,7 @@ public class JavaDebug {
 		System.out.println(this.getClass().getName() + "() ju2.getText() = " + ju2.getText());
 		System.out.println(this.getClass().getName() + "() ju2.getVal() = " + ju2.getVal());
 		
-		System.out.println("JavaDebug::main() [end]");
+		System.out.println("JavaTest003::main() [end]");
 
 	}
 
