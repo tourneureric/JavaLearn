@@ -8,7 +8,7 @@ public class JavaLearn {
 
 	public static void main(String[] args) {
 		
-		System.out.println("JavaLearn::main()");
+		System.out.println("JavaLearn::main() [begin]");
 	
 		if (onJavaTypes) {
 			JavaTypes javaTypes = new JavaTypes();
@@ -29,6 +29,8 @@ public class JavaLearn {
 			JavaEmptyString javaEmptyString = new JavaEmptyString();
 			javaEmptyString.main();
 		}
+		
+		System.out.println("JavaLearn::main() [end]");
 		
 	}
 
