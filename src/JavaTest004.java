@@ -6,13 +6,13 @@ public class JavaTest004 {
 
 	public JavaTest004 () {
 		
-		System.out.println("JavaTest004::JavaTest004()");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
 		
 	}
 
 	public void main() {
 
-		System.out.println("JavaTest004::main() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
 		
 		Scanner sc = new Scanner(System.in);
 	
@@ -96,7 +96,7 @@ public class JavaTest004 {
 			sc.close();
 		} catch (Exception e) { System.out.println("ERROR"); }
 		
-		System.out.println("JavaTest004::main() [end]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 
 	}
 	

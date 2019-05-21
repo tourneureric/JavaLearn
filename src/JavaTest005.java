@@ -1,16 +1,17 @@
+
 import java.util.Scanner;
 
 public class JavaTest005 {
 
 	public JavaTest005 () {
 		
-		System.out.println("JavaTest005::JavaTest005()");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
 		
 	}
 
 	public void main() {
 		
-		System.out.println("JavaTest005::main() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -26,7 +27,15 @@ public class JavaTest005 {
 			sc.close();
 		} catch (Exception e) { System.out.println("ERROR"); }
 		
-		System.out.println("JavaTest005::main() [end]");
+		
+		int i = -10;
+		 
+		if (i < 0)
+		  System.out.println("le nombre est négatif");
+		else
+		  System.out.println("le nombre est positif");
+		
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 
 	}
 

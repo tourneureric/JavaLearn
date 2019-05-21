@@ -9,7 +9,7 @@ public class JavaLearn {
 
 	public static void main(String[] args) {
 		
-		System.out.println("JavaLearn::main() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaLearn::main() [begin]");
 	
 		if (onJavaTest001) {
 			JavaTest001 javaTest001 = new JavaTest001();
@@ -36,7 +36,7 @@ public class JavaLearn {
 			javaTest005.main();
 		}
 		
-		System.out.println("JavaLearn::main() [end]");
+		Log.log(Log.LOG_DEBUG, "JavaLearn::main() [end]");
 		
 	}
 

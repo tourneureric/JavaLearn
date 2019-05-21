@@ -7,13 +7,13 @@ public class JavaTest001 {
 
 	public JavaTest001 () {
 		
-		System.out.println("JavaTest001::JavaTest001()");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
 		
 	}
 
 	public void main() {
 		
-		System.out.println("JavaTest001::main() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
 				
 		List<String> myArrayListOfString1 = new ArrayList<String>();
 		myArrayListOfString1.add("réponse 1");
@@ -31,7 +31,7 @@ public class JavaTest001 {
 		}
 		System.out.println("myArrayListOfString2.size = " + myArrayListOfString2.size());
 		
-		System.out.println("JavaTest001::main() [end]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 
 	}
 

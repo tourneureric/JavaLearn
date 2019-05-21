@@ -3,14 +3,14 @@ public class JavaTest002 {
 
 	public JavaTest002 () {
 		
-		System.out.println("JavaTest002::JavaTest002()");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
 		
 	}
 
 	@SuppressWarnings("unused")
 	public void main() {
 		
-		System.out.println("JavaTest002::main() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
 		
 		System.out.println("");
 
@@ -105,7 +105,7 @@ public class JavaTest002 {
 		}
 		System.out.println("");
 		
-		System.out.println("JavaTest002::main() [end]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 
 	}
 	
