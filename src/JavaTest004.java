@@ -90,7 +90,6 @@ public class JavaTest004 {
 			System.out.println("Veuillez saisir un boolean :");
 			boolean my_boolean = sc.nextBoolean();
 			System.out.println("my_boolean = " + my_boolean);
-
 		} catch (Exception e) { System.out.println("ERROR " + e.getMessage()); }		
 
 		try {
