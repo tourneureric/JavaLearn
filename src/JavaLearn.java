@@ -9,6 +9,7 @@ public class JavaLearn {
 	private static boolean onJavaTest004 = false;
 	private static boolean onJavaTest005 = false;
 	private static boolean onJavaTest006 = true;
+	private static boolean onJavaTest007 = true;
 
 	public static void main(String[] args) {
 		
@@ -20,6 +21,7 @@ public class JavaLearn {
 		if (onJavaTest004) { JavaTest004 javaTest = new JavaTest004(); javaTest.main(); }
 		if (onJavaTest005) { JavaTest005 javaTest = new JavaTest005(); javaTest.main(); }
 		if (onJavaTest006) { JavaTest006 javaTest = new JavaTest006(); javaTest.main(); }
+		if (onJavaTest007) { JavaTest007 javaTest = new JavaTest007(); javaTest.main(); }
 		
 		Log.log(Log.LOG_DEBUG, "JavaLearn::main() [end]");
 		
