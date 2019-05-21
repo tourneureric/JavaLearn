@@ -14,6 +14,8 @@ public class JavaTest001 {
 	public void main() {
 		
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
+		
+		if (JavaLearn.JL_RUN) {
 				
 		List<String> myArrayListOfString1 = new ArrayList<String>();
 		myArrayListOfString1.add("réponse 1");
@@ -30,6 +32,8 @@ public class JavaTest001 {
 			System.out.println(++i + " : " + str);
 		}
 		System.out.println("myArrayListOfString2.size = " + myArrayListOfString2.size());
+		
+		}
 		
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 

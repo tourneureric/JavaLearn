@@ -10,6 +10,8 @@ public class JavaTest003 {
 	public void main() {
 		
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
+		
+		if (JavaLearn.JL_RUN) {
 
 		User ju1 = new User("moi", 1);
 		User ju2 = new User("toi", 2);
@@ -22,6 +24,8 @@ public class JavaTest003 {
 		
 		System.out.println(this.getClass().getName() + "() ju2.getText() = " + ju2.getText());
 		System.out.println(this.getClass().getName() + "() ju2.getVal() = " + ju2.getVal());
+		
+		}
 		
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 

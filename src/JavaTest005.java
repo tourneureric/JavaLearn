@@ -13,6 +13,8 @@ public class JavaTest005 {
 		
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
 		
+		if (JavaLearn.JL_RUN) {
+			
 		Scanner sc = new Scanner(System.in);
 		
 		try {
@@ -58,6 +60,8 @@ public class JavaTest005 {
 		try {
 			sc.close();
 		} catch (Exception e) { System.out.println("ERROR"); }
+		
+		}		
 		
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 

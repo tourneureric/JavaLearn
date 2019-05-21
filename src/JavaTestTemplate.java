@@ -3,15 +3,19 @@ public class JavaTestTemplate {
 
 	public JavaTestTemplate () {
 		
-		System.out.println("JavaTestTemplate::JavaTestTemplate()");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
 		
 	}
 
 	public void main() {
 		
-		System.out.println("JavaTestTemplate::main() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
 		
-		System.out.println("JavaTestTemplate::main() [end]");
+		if (JavaLearn.JL_RUN) {
+
+		}
+		
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 
 	}
 

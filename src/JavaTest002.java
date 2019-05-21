@@ -12,6 +12,8 @@ public class JavaTest002 {
 		
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
 		
+		if (JavaLearn.JL_RUN) {
+		
 		System.out.println("");
 
 		String s1 = new String("");
@@ -104,6 +106,8 @@ public class JavaTest002 {
 			System.out.println("		(s4.isEmpty()) false");
 		}
 		System.out.println("");
+		
+		}
 		
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
 
