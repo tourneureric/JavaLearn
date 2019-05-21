@@ -8,7 +8,7 @@ public class JavaLearn {
 	private static boolean onJavaTest003 = false;
 	private static boolean onJavaTest004 = false;
 	private static boolean onJavaTest005 = false;
-	private static boolean onJavaTest006 = true;
+	private static boolean onJavaTest006 = false;
 	private static boolean onJavaTest007 = true;
 
 	public static void main(String[] args) {
