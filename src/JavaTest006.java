@@ -40,7 +40,6 @@ public class JavaTest006 {
 			}
 			*/
 			
-			/*
 			String prenom = new String();
 			//Pas besoin d'initialiser : on entre au moins une fois dans la boucle !
 			char reponse = ' ';
@@ -61,7 +60,6 @@ public class JavaTest006 {
 			 
 			System.out.println("Au revoir…");
 			sc.close();
-			*/
 			
 			/*
 			for(int i = 1; i <= 10; i++)
