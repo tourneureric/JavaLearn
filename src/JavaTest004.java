@@ -53,42 +53,49 @@ public class JavaTest004 {
 		try {
 			System.out.println("Veuillez saisir un byte :");
 			byte my_byte = sc.nextByte();
+			sc.nextLine();
 			System.out.println("my_byte = " + my_byte);
 		} catch (Exception e) { System.out.println("ERROR " + e.getMessage()); }		
 		
 		try {
 			System.out.println("Veuillez saisir un short :");
 			short my_short= sc.nextShort();
+			sc.nextLine();
 			System.out.println("my_short = " + my_short);
 		} catch (Exception e) { System.out.println("ERROR " + e.getMessage()); }		
 
 		try {
 			System.out.println("Veuillez saisir un int :");
 			int my_int = sc.nextInt();
+			sc.nextLine();
 			System.out.println("my_int = " + my_int);
 		} catch (Exception e) { System.out.println("ERROR " + e.getMessage()); }		
 
 		try {
 			System.out.println("Veuillez saisir un long :");
 			long my_long = sc.nextLong();
+			sc.nextLine();
 			System.out.println("my_long = " + my_long);
 		} catch (Exception e) { System.out.println("ERROR " + e.getMessage()); }		
 
 		try {
 			System.out.println("Veuillez saisir un float :");
 			float my_float = sc.nextFloat();
+			sc.nextLine();
 			System.out.println("my_float = " + my_float);
 		} catch (Exception e) { System.out.println("ERROR " + e.getMessage()); }		
 
 		try {
 			System.out.println("Veuillez saisir un double :");
 			double my_double = sc.nextDouble();
+			sc.nextLine();
 			System.out.println("my_double = " + my_double);
 		} catch (Exception e) { System.out.println("ERROR " + e.getMessage()); }		
 
 		try {
 			System.out.println("Veuillez saisir un boolean :");
 			boolean my_boolean = sc.nextBoolean();
+			sc.nextLine();
 			System.out.println("my_boolean = " + my_boolean);
 		} catch (Exception e) { System.out.println("ERROR " + e.getMessage()); }		
 
