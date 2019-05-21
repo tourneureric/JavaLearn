@@ -14,6 +14,7 @@ public class JavaTest006 {
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
 		
 		if (JavaLearn.JL_RUN) {
+			
 			/*
 			String prenom;
 			char reponse = 'O';
@@ -36,6 +37,7 @@ public class JavaTest006 {
 			}
 			System.out.println("Au revoir…");
 			sc.close();
+			}
 			*/
 			
 			/*
