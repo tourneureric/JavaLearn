@@ -1,10 +1,11 @@
 
 public class JavaLearn {
 	
-	private static boolean onJavaTest001 = true;
-	private static boolean onJavaTest002 = true;
-	private static boolean onJavaTest003 = true;
-	private static boolean onJavaTest004 = true;
+	private static boolean onJavaTest001 = false;
+	private static boolean onJavaTest002 = false;
+	private static boolean onJavaTest003 = false;
+	private static boolean onJavaTest004 = false;
+	private static boolean onJavaTest005 = true;
 
 	public static void main(String[] args) {
 		
@@ -28,6 +29,11 @@ public class JavaLearn {
 		if (onJavaTest004) {
 			JavaTest004 javaTest004 = new JavaTest004();
 			javaTest004.main();
+		}
+		
+		if (onJavaTest005) {
+			JavaTest005 javaTest005 = new JavaTest005();
+			javaTest005.main();
 		}
 		
 		System.out.println("JavaLearn::main() [end]");
