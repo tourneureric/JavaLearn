@@ -1,4 +1,6 @@
 
+import java.util.Scanner;
+
 public class JavaTestTemplate {
 
 	public JavaTestTemplate () {
@@ -13,9 +15,37 @@ public class JavaTestTemplate {
 
 		if (JavaLearn.JL_RUN) {
 
+			try {
+
+				String again = "n";
+
+				Scanner sc = new Scanner(System.in);
+
+				do {
+
+					doit();
+
+					System.out.println("Voulez-vous continuer (o/n) ?");
+					again = sc.nextLine();
+					System.out.println("");
+
+				} while (again.equalsIgnoreCase("o"));
+
+				sc.close();
+
+			} catch (Exception e) { Log.error("in main()"); throw e; }
+
+			Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
+
 		}
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
+	}
+
+	private void doit() {
+
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
 
 	}
 
