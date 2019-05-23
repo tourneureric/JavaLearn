@@ -25,9 +25,9 @@ public class JavaTestTemplate {
 
 					doit();
 
-					System.out.println("Voulez-vous continuer (o/n) ?");
+					P.print("Voulez-vous continuer (o/n) ?");
 					again = sc.nextLine();
-					System.out.println("");
+					P.print("");
 
 				} while (again.equalsIgnoreCase("o"));
 
