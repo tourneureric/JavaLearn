@@ -25,9 +25,9 @@ public class JavaTest008 {
 
 					doit();
 
-					System.out.println("Voulez-vous continuer (o/n) ?");
+					P.print("Voulez-vous continuer (o/n) ?");
 					again = sc.nextLine();
-					System.out.println("");
+					P.print("");
 
 				} while (again.equalsIgnoreCase("o"));
 
@@ -41,9 +41,18 @@ public class JavaTest008 {
 
 	}
 
+	@SuppressWarnings("deprecation")
 	private void doit() {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+
+		int myTab001[][] = { {0,2,4,6,8},{1,3,5,7,9} };
+
+		for (int i = 0; i < myTab001.length; i++) {
+			for (int j = 0; j < myTab001[i].length; j++) {
+				P.print("myTab001[" + i + "][" + j + "] = " + myTab001[i][j]);
+			}
+		}
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
 
