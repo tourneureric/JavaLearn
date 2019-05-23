@@ -22,7 +22,7 @@ public class JavaTest008 {
 				Scanner sc = new Scanner(System.in);
 
 				do {
-					
+
 					doit();
 
 					System.out.println("Voulez-vous continuer (o/n) ?");
