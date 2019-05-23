@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class JavaTestTemplate {
-	
+
 	Scanner sc;
 
 	public JavaTestTemplate () {
