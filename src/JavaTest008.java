@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class JavaTest008 {
 
+	Scanner sc;
+
 	public JavaTest008 () {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
@@ -19,7 +21,7 @@ public class JavaTest008 {
 
 				String again = "n";
 
-				Scanner sc = new Scanner(System.in);
+				sc = new Scanner(System.in);
 
 				do {
 
@@ -44,6 +46,8 @@ public class JavaTest008 {
 	private void doit() {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+		
+		P.print("================================================================================");
 
 		int myTab001[][] = { {0, 2, 4, 6, 8},{1, 3,5 ,7, 9} };
 
@@ -52,6 +56,8 @@ public class JavaTest008 {
 				P.print("myTab001[" + i + "][" + j + "] = " + myTab001[i][j]);
 			}
 		}
+
+		P.print("================================================================================");
 
 		String myTab002[][][] =
 			{
@@ -81,6 +87,27 @@ public class JavaTest008 {
 				}
 			}
 		}
+
+		P.print("================================================================================");
+
+		char tableauCaractere[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g'};
+		int i = 0;
+		char carac = ' ';
+
+		P.print("Rentrez une lettre en minuscule, SVP ");
+
+		carac = sc.nextLine().charAt(0);
+
+		while (i < tableauCaractere.length && carac != tableauCaractere[i]) { i++; }
+
+
+		if (i < tableauCaractere.length) {
+			P.print(" La lettre " + carac + " se trouve bien dans le tableau (position " + i + ") !");
+		} else {
+			P.print(" La lettre " + carac + " ne se trouve pas dans le tableau !");
+		}
+
+		P.print("================================================================================");
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
 
