@@ -41,7 +41,6 @@ public class JavaTest008 {
 
 	}
 
-	@SuppressWarnings("deprecation")
 	private void doit() {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
