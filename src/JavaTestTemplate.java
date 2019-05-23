@@ -2,6 +2,8 @@
 import java.util.Scanner;
 
 public class JavaTestTemplate {
+	
+	Scanner sc;
 
 	public JavaTestTemplate () {
 
@@ -19,7 +21,7 @@ public class JavaTestTemplate {
 
 				String again = "n";
 
-				Scanner sc = new Scanner(System.in);
+				sc = new Scanner(System.in);
 
 				do {
 
