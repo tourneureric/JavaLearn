@@ -46,6 +46,29 @@ public class JavaTest009 {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
 
+		int tabInt[] = {0, 1, 2, 3, 4};
+		String tabString[] = {"aaa", "bbb", "ccc"};
+
+		P.print("================================================================================");
+
+		for (int i = 0; i < tabInt.length; i++) {
+			P.print("" + i);
+		}
+
+		P.print("================================================================================");
+
+		for (int i : tabInt) {
+			P.print(String.valueOf(i));
+		}
+
+		P.print("================================================================================");
+
+		for (String s : tabString) {
+			P.print(s);
+		}
+
+		P.print("================================================================================");
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
 
 	}
