@@ -29,7 +29,6 @@ public class JavaTest008 {
 
 					P.print("Voulez-vous continuer (o/n) ?");
 					again = sc.nextLine();
-					P.print("");
 
 				} while (again.equalsIgnoreCase("o"));
 
