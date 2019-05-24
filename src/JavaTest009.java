@@ -26,6 +26,7 @@ public class JavaTest009 {
 				do {
 
 					doit();
+					useit();
 
 					P.print("Voulez-vous continuer (o/n) ?");
 					again = sc.nextLine();
@@ -62,7 +63,7 @@ public class JavaTest009 {
 		}
 
 		P.print("================================================================================");
-		
+
 		int n = 0;
 		for (String s : tabString) {
 			P.print("tabString[" + n + "] = " + tabString[n] + " => s = " + s);
@@ -71,7 +72,21 @@ public class JavaTest009 {
 
 		P.print("================================================================================");
 
+		int v1 = 1;
+		P.print("v1 = " + v1);
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
+
+	}
+
+	private void useit() {
+
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::useit() [begin]");
+
+		int v1 = 2;
+		P.print("v1 = " + v1);
+
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::useit() [end]");
 
 	}
 
