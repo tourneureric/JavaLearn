@@ -33,7 +33,8 @@ public class JavaTestTemplate {
 					again = sc.nextLine();
 
 				} while (again.equalsIgnoreCase("o"));
-
+				
+				P.print("Fin");
 				sc.close();
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
