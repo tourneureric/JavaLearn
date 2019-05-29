@@ -7,9 +7,11 @@ public class JavaTest010 {
 
 	Scanner sc;
 
-	public JavaTest010 () {
+	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
 
 	}
 
@@ -44,11 +46,9 @@ public class JavaTest010 {
 
 	}
 
-	private void doit() {
+	public JavaTest010 () {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
-
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
 
 	}
 
