@@ -9,7 +9,7 @@ public class JavaTest010 {
 
 	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest010::doit() [begin]");
 		
 		Ville ville1 = new Ville();
 		P.print("ville1 = " + ville1);
@@ -58,13 +58,13 @@ public class JavaTest010 {
 		P.print("Le nombre d'instances de la classe Ville est : " + Ville.nbreInstances);
 		P.print("Le nombre d'instances de la classe Ville est : " + Ville.getNbreInstancesBis());
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
+		Log.log(Log.LOG_DEBUG, "JavaTest010::doit() [end]");
 
 	}
 
 	public void main() {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest010::main() [begin]");
 
 		if (JavaLearn.JL_RUN) {
 
@@ -88,7 +88,7 @@ public class JavaTest010 {
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
 
-			Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
+			Log.log(Log.LOG_DEBUG, "JavaTest010::main() [end]");
 
 		}
 
@@ -96,7 +96,9 @@ public class JavaTest010 {
 
 	public JavaTest010 () {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
+		Log.log(Log.LOG_DEBUG, "JavaTest010::JavaTest010() [begin]");
+		
+		Log.log(Log.LOG_DEBUG, "JavaTest010::JavaTest010() [end]");
 
 	}
 

@@ -20,12 +20,12 @@ public class Ville {
 	   ============================================================ */
 
 	public static int nbreInstances = 0;
-	private static int nbreInstancesBis = 0;
+	protected static int nbreInstancesBis = 0;
 
-	private String nomVille;
-	private String nomPays;
-	private int nbreHabitants;
-	private char categorie;
+	protected String nomVille;
+	protected String nomPays;
+	protected int nbreHabitants;
+	protected char categorie;
 
 	/* ============================================================
 	    @Override public methods
@@ -33,7 +33,7 @@ public class Ville {
 
 	@Override
 	public String toString() {
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::toString() [begin]");
+		Log.log(Log.LOG_DEBUG, "Ville::toString() [begin]");
 
 		String str = "Ville{" +
 				"nomVille='" + nomVille + "'" +
@@ -42,7 +42,7 @@ public class Ville {
 				", categorie='" + categorie + "'" +
 				'}';
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::toString() [end]");
+		Log.log(Log.LOG_DEBUG, "Ville::toString() [end]");
 
 		return str;
 	}
@@ -52,7 +52,7 @@ public class Ville {
 	   ============================================================ */
 
 	public Ville() {
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::Ville() [begin]");
+		Log.log(Log.LOG_DEBUG, "Ville::Ville() [begin]");
 
 		Log.log(Log.LOG_TRACE, "Creéation d'une ville !");
 		nbreInstances++;
@@ -62,11 +62,11 @@ public class Ville {
 		nbreHabitants = 0;
 		this.setCategorie();
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::Ville() [end]");
+		Log.log(Log.LOG_DEBUG, "Ville::Ville() [end]");
 	}
 
 	public Ville(String pNom, int pNbre, String pPays) {
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::Ville(String pNom, int pNbre, String pPays) [begin]");
+		Log.log(Log.LOG_DEBUG, "Ville::Ville(String pNom, int pNbre, String pPays) [begin]");
 
 		Log.log(Log.LOG_TRACE, "Creéation d'une ville avec des paramètres !");
 		nbreInstances++;
@@ -76,7 +76,7 @@ public class Ville {
 		nbreHabitants = pNbre;
 		this.setCategorie();
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::Ville(String pNom, int pNbre, String pPays) [end]");
+		Log.log(Log.LOG_DEBUG, "Ville::Ville(String pNom, int pNbre, String pPays) [end]");
 	}
 
 	public String getNomVille() {
@@ -117,7 +117,7 @@ public class Ville {
 	}
 
 	public String comparer(Ville pVille) {
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::comparer() [begin]");
+		Log.log(Log.LOG_DEBUG, "Ville::comparer() [begin]");
 
 		String reponse;
 
@@ -131,7 +131,7 @@ public class Ville {
 			reponse = "Unknown";
 		}
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::comparer() [end]");
+		Log.log(Log.LOG_DEBUG, "Ville::comparer() [end]");
 
 		return reponse;		
 	}
@@ -145,7 +145,7 @@ public class Ville {
 	   ============================================================ */
 
 	private void setCategorie() {
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::setCategorie() [begin]");
+		Log.log(Log.LOG_DEBUG, "Ville::setCategorie() [begin]");
 
 		int bornesSuperieures[] = {0, 1_000, 10_000, 100_000, 500_000, 1_000_000, 5_000_000, 1_000_0000};
 		char categories[] = {'?', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
@@ -156,7 +156,7 @@ public class Ville {
 
 		this.categorie = categories[i];
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::setCategorie() [end]");
+		Log.log(Log.LOG_DEBUG, "Ville::setCategorie() [end]");
 	}
 
 }

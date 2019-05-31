@@ -9,18 +9,18 @@ public class JavaTest011 {
 
 	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest011::doit() [begin]");
 		
 		Capitale cap = new Capitale();
 		P.print(cap.toString()); 
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
+		Log.log(Log.LOG_DEBUG, "JavaTest011::doit() [end]");
 
 	}
 
 	public void main() {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest011::main() [begin]");
 
 		if (JavaLearn.JL_RUN) {
 
@@ -44,7 +44,7 @@ public class JavaTest011 {
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
 
-			Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
+			Log.log(Log.LOG_DEBUG, "JavaTest011::main() [end]");
 
 		}
 
@@ -52,8 +52,10 @@ public class JavaTest011 {
 
 	public JavaTest011 () {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
-
+		Log.log(Log.LOG_DEBUG, "JavaTest011::JavaTest011() [begin]");
+		
+		Log.log(Log.LOG_DEBUG, "JavaTest011::JavaTest011() [end]");
+		
 	}
 
 }

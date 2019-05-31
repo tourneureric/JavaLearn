@@ -9,15 +9,15 @@ public class JavaTestTemplate {
 
 	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::doit() [begin]");
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
+		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::doit() [end]");
 
 	}
 
 	public void main() {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::main() [begin]");
 
 		if (JavaLearn.JL_RUN) {
 
@@ -41,7 +41,7 @@ public class JavaTestTemplate {
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
 
-			Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::main() [end]");
+			Log.log(Log.LOG_DEBUG, "JavaTestTemplate::main() [end]");
 
 		}
 
@@ -49,7 +49,9 @@ public class JavaTestTemplate {
 
 	public JavaTestTemplate () {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
+		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [begin]");
+
+		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [end]");
 
 	}
 
