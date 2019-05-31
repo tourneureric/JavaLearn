@@ -18,20 +18,20 @@ public class Capitale extends Ville {
 	/* ============================================================
 		Functionnal variables
 	   ============================================================ */
-	
+
 	private String monument;
 
 	/* ============================================================
 		@Override public methods
 	   ============================================================ */
-	
+
 	@Override
 	public String toString() {
 		Log.log(Log.LOG_DEBUG, "Capitale::toString() [begin]");
 
 		String str = "Capitale{" +
-				"monument='" + this.monument + "'" +
-				", " + super.toString() +
+				super.toString() +
+				", monument='" + this.monument + "'" +
 				'}';
 
 		Log.log(Log.LOG_DEBUG, "Capitale::toString() [end]");
@@ -41,17 +41,35 @@ public class Capitale extends Ville {
 	/* ============================================================
 		Non @Override public methods
 	   ============================================================ */
-	
+
 	public Capitale() {
 		super();
-
 		Log.log(Log.LOG_DEBUG, "Capitale::Capitale() [begin]");
 
+		Log.log(Log.LOG_TRACE, "Creéation d'une capitale !");
 		monument = "Aucun";
-		
+
 		Log.log(Log.LOG_DEBUG, "Capitale::Capitale() [end]");
 	}
-	
+
+	public Capitale(String pNom, int pNbre, String pPays, String pMonument) {
+		super(pNom, pNbre, pPays);
+		Log.log(Log.LOG_DEBUG, "Capitale::Capitale(String pNom, int pNbre, String pPays, String pMonument) [begin]");
+
+		Log.log(Log.LOG_TRACE, "Creéation d'une capitale avec des paramètres !");
+		monument = pMonument;
+
+		Log.log(Log.LOG_DEBUG, "Capitale::Capitale(String pNom, int pNbre, String pPays, String pMonument) [end]");
+	}
+
+	public String getMonument() {
+		return monument;
+	}
+
+	public void setMonument(String monument) {
+		this.monument = monument;
+	}
+
 	/* ============================================================
 		@Override private methods
 	   ============================================================ */

@@ -11,8 +11,11 @@ public class JavaTest011 {
 
 		Log.log(Log.LOG_DEBUG, "JavaTest011::doit() [begin]");
 		
-		Capitale cap = new Capitale();
-		P.print(cap.toString()); 
+		// Capitale cap = new Capitale();
+		// P.print(cap.toString());
+		
+		Capitale paris = new Capitale("Paris", 2_141_000, "France", "Tour Eiffel");
+		P.print("paris = " + paris);
 
 		Log.log(Log.LOG_DEBUG, "JavaTest011::doit() [end]");
 
