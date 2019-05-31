@@ -28,28 +28,28 @@ public class Ville {
 	private char categorie;
 
 	/* ============================================================
-	    @Override methods
+	    @Override public methods
 	   ============================================================ */
 
 	@Override
 	public String toString() {
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::toString() [begin]");
-		
+
 		String str = "Ville{" +
 				"nomVille='" + nomVille + "'" +
 				", nomPays='" + nomPays + "'" +
 				", nbreHabitants=" + nbreHabitants +
 				", categorie='" + categorie + "'" +
 				'}';
-		
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::toString() [end]");
-		
+
 		return str;
 	}
 
 	/* ============================================================
-    	Non @Override methods
-   		============================================================ */
+    	Non @Override public methods
+	   ============================================================ */
 
 	public Ville() {
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::Ville() [begin]");
@@ -61,7 +61,7 @@ public class Ville {
 		nomPays = "Inconnu";
 		nbreHabitants = 0;
 		this.setCategorie();
-		
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::Ville() [end]");
 	}
 
@@ -75,7 +75,7 @@ public class Ville {
 		nomPays = pPays;
 		nbreHabitants = pNbre;
 		this.setCategorie();
-		
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::Ville(String pNom, int pNbre, String pPays) [end]");
 	}
 
@@ -116,21 +116,6 @@ public class Ville {
 		Ville.nbreInstancesBis = nbreInstancesBis;
 	}
 
-	private void setCategorie() {
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::setCategorie() [begin]");
-
-		int bornesSuperieures[] = {0, 1_000, 10_000, 100_000, 500_000, 1_000_000, 5_000_000, 1_000_0000};
-		char categories[] = {'?', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
-
-		int i = 0;
-		while (i < bornesSuperieures.length && this.nbreHabitants > bornesSuperieures[i])
-			i++;
-
-		this.categorie = categories[i];
-		
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::setCategorie() [end]");
-	}
-
 	public String comparer(Ville pVille) {
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::comparer() [begin]");
 
@@ -147,8 +132,31 @@ public class Ville {
 		}
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::comparer() [end]");
-		
+
 		return reponse;		
+	}
+
+	/* ============================================================
+    	@Override private methods
+	   ============================================================ */
+
+	/* ============================================================
+		Non @Override private methods
+	   ============================================================ */
+
+	private void setCategorie() {
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::setCategorie() [begin]");
+
+		int bornesSuperieures[] = {0, 1_000, 10_000, 100_000, 500_000, 1_000_000, 5_000_000, 1_000_0000};
+		char categories[] = {'?', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
+
+		int i = 0;
+		while (i < bornesSuperieures.length && this.nbreHabitants > bornesSuperieures[i])
+			i++;
+
+		this.categorie = categories[i];
+
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::setCategorie() [end]");
 	}
 
 }
