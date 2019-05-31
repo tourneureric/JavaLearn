@@ -7,9 +7,11 @@ public class JavaTest011 {
 
 	Scanner sc;
 
-	public JavaTest011 () {
+	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
 
 	}
 
@@ -33,7 +35,7 @@ public class JavaTest011 {
 					again = sc.nextLine();
 
 				} while (again.equalsIgnoreCase("o"));
-				
+
 				P.print("Fin");
 				sc.close();
 
@@ -45,11 +47,9 @@ public class JavaTest011 {
 
 	}
 
-	private void doit() {
+	public JavaTest011 () {
 
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
-
-		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::" + this.getClass().getName() + "()");
 
 	}
 
