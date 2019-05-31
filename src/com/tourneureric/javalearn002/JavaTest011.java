@@ -10,6 +10,9 @@ public class JavaTest011 {
 	private void doit() {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [begin]");
+		
+		Capitale cap = new Capitale();
+		P.print(cap.toString()); 
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getName() + "::doit() [end]");
 
