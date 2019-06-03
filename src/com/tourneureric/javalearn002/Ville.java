@@ -1,6 +1,8 @@
 
 package com.tourneureric.javalearn002;
 
+import java.util.Objects;
+
 public class Ville {
 
 	/* ============================================================
@@ -45,6 +47,30 @@ public class Ville {
 		Log.log(Log.LOG_DEBUG, "Ville::toString() [end]");
 
 		return str;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(categorie, nbreHabitants, nomPays, nomVille);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		//On vérifie si les références d'objets sont identiques
+		if (this == obj)
+			return true;
+
+		//On s'assure que les objets sont du même type, ici de type Ville
+		if (getClass() != obj.getClass())
+			return false;
+
+		//Maintenant, on compare les attributs de nos objets
+		Ville other = (Ville) obj;
+
+		return Objects.equals(other.getCategorie(), this.getCategorie()) &&
+				Objects.equals(other.getNomVille(), this.getNomVille()) &&
+				Objects.equals(other.getNbreHabitants(), this.getNbreHabitants()) &&
+				Objects.equals(other.getNomPays(), this.getNomPays());
 	}
 
 	/* ============================================================

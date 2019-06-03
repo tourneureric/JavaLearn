@@ -25,7 +25,7 @@ public class Capitale extends Ville {
 		@Override public methods
 	   ============================================================ */
 
-	@Override
+		@Override
 	public String toString() {
 		Log.log(Log.LOG_DEBUG, "Capitale::toString() [begin]");
 
@@ -38,6 +38,7 @@ public class Capitale extends Ville {
 
 		return str;
 	}
+
 	/* ============================================================
 		Non @Override public methods
 	   ============================================================ */
