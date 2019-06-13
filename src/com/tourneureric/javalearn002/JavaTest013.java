@@ -8,15 +8,18 @@ public class JavaTest013 {
 
 	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::doit() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [begin]");
+		
+		Object obj = new Loup();
+		Loup l = (Loup) obj;
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::doit() [end]");
+		  Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [end]");
 
 	}
 
 	public void main() {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::main() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest013::main() [begin]");
 
 		if (JavaLearn.JL_RUN) {
 
@@ -40,7 +43,7 @@ public class JavaTest013 {
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
 
-			Log.log(Log.LOG_DEBUG, "JavaTestTemplate::main() [end]");
+			Log.log(Log.LOG_DEBUG, "JavaTest013::main() [end]");
 
 		}
 
@@ -48,9 +51,9 @@ public class JavaTest013 {
 
 	public JavaTest013 () {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest013::JavaTest013() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [end]");
+		Log.log(Log.LOG_DEBUG, "JavaTest013::JavaTest013() [end]");
 
 	}
 
