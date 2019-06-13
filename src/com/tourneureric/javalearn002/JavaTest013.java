@@ -10,8 +10,14 @@ public class JavaTest013 {
 
 		Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [begin]");
 		
-		Object obj = new Loup();
-		Loup l = (Loup) obj;
+		Object objLoup = new Loup();
+		Loup loup = (Loup) objLoup;
+		
+		loup.deplacement();
+		loup.crier();
+
+		loup.manger();
+		loup.boire();
 
 		  Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [end]");
 
