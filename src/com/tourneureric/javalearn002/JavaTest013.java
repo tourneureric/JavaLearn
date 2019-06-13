@@ -5,21 +5,53 @@ import java.util.Scanner;
 public class JavaTest013 {
 
 	Scanner sc;
+	
+	Chat chat1;
+	Chien chien1;
+	Lion lion1;
+	Loup loup1;
+	Tigre tigre1;
 
 	private void doit() {
 
 		Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [begin]");
 		
-		Object objLoup = new Loup();
-		Loup loup = (Loup) objLoup;
+		Chat chat1 = new Chat();
+
+		chat1.deplacement();
+		chat1.crier();
+		chat1.manger();
+		chat1.boire();
 		
-		loup.deplacement();
-		loup.crier();
+		chien1 = new Chien();
 
-		loup.manger();
-		loup.boire();
+		chien1.deplacement();
+		chien1.crier();
+		chien1.manger();
+		chien1.boire();
+		
+		lion1 = new Lion();
 
-		  Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [end]");
+		lion1.deplacement();
+		lion1.crier();
+		lion1.manger();
+		lion1.boire();
+
+		loup1 = new Loup();
+
+		loup1.deplacement();
+		loup1.crier();
+		loup1.manger();
+		loup1.boire();
+
+		tigre1 = new Tigre();
+
+		tigre1.deplacement();
+		tigre1.crier();
+		tigre1.manger();
+		tigre1.boire();
+
+		Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [end]");
 
 	}
 
