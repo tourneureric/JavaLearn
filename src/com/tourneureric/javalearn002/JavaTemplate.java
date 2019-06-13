@@ -1,4 +1,3 @@
-
 package com.tourneureric.javalearn002;
 
 public class JavaTemplate {
