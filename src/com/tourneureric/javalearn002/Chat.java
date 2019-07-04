@@ -1,19 +1,21 @@
 package com.tourneureric.javalearn002;
 
-public class Chat extends Animal {
+public class Chat extends Felin {
 
-	@Override
-	void deplacement() {
-		Log.log(Log.LOG_DEBUG, "Chat::deplacement() [begin]");
+	public Chat() {
 
-		Log.log(Log.LOG_DEBUG, "Chat::deplacement() [end]");
 	}
-	
-	@Override
+
+	public Chat(String couleur, int poids) {
+		this.couleur = couleur;
+		this.poids = poids;
+	}
+
 	void crier() {
 		Log.log(Log.LOG_DEBUG, "Chat::crier() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "Chat::crier() [end]");
-	}
+		P.print("Chat : Je miaule sur les toits !");
 
+		Log.log(Log.LOG_DEBUG, "Chat::crier() [end]");
+	} 
 }

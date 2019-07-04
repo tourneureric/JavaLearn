@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class JavaTest013 {
 
 	Scanner sc;
-	
+
 	Chat chat1;
 	Chien chien1;
 	Lion lion1;
@@ -15,21 +15,22 @@ public class JavaTest013 {
 	private void doit() {
 
 		Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [begin]");
-		
+
+		/*
 		Chat chat1 = new Chat();
 
 		chat1.deplacement();
 		chat1.crier();
 		chat1.manger();
 		chat1.boire();
-		
+
 		chien1 = new Chien();
 
 		chien1.deplacement();
 		chien1.crier();
 		chien1.manger();
 		chien1.boire();
-		
+
 		lion1 = new Lion();
 
 		lion1.deplacement();
@@ -50,6 +51,14 @@ public class JavaTest013 {
 		tigre1.crier();
 		tigre1.manger();
 		tigre1.boire();
+		*/
+		
+	    Loup l = new Loup("Gris bleuté", 20);
+	    l.boire();
+	    l.manger();
+	    l.deplacement();
+	    l.crier();
+	    System.out.println(l.toString());
 
 		Log.log(Log.LOG_DEBUG, "JavaTest013::doit() [end]");
 

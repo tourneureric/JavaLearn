@@ -1,19 +1,25 @@
 package com.tourneureric.javalearn002;
 
-public class Chien extends Animal {
+public class Chien extends Canin {
 
-	@Override
-	void deplacement() {
-		Log.log(Log.LOG_DEBUG, "Chien::deplacement() [begin]");
+	public Chien() {
+		Log.log(Log.LOG_DEBUG, "Chien::Chien() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "Chien::deplacement() [end]");
+		P.print("Chien : instanciation");
+
+		Log.log(Log.LOG_DEBUG, "Chien::Chien() [end]");	
 	}
-	
-	@Override
+
+	public Chien(String couleur, int poids) {
+		this.couleur = couleur;
+		this.poids = poids;
+	}       
+
 	void crier() {
 		Log.log(Log.LOG_DEBUG, "Chien::crier() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "Chien::crier() [end]");
-	}
+		P.print("Chien : J'aboie sans raison !");
 
+		Log.log(Log.LOG_DEBUG, "Chien::crier() [end]");
+	} 
 }

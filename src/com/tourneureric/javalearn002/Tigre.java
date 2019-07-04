@@ -1,19 +1,25 @@
 package com.tourneureric.javalearn002;
 
-public class Tigre extends Animal {
+public class Tigre extends Felin {
 
-	@Override
-	void deplacement() {
-		Log.log(Log.LOG_DEBUG, "Tigre::deplacement() [begin]");
+	public Tigre() {
+		Log.log(Log.LOG_DEBUG, "Tigre::Tigre() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "Tigre::deplacement() [end]");
+		P.print("Tigre : instanciation");
+
+		Log.log(Log.LOG_DEBUG, "Tigre::Tigre() [end]");
 	}
-	
-	@Override
+
+	public Tigre(String couleur, int poids) {
+		this.couleur = couleur;
+		this.poids = poids;
+	}
+
 	void crier() {
 		Log.log(Log.LOG_DEBUG, "Tigre::crier() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "Tigre::crier() [end]");
-	}
+		P.print("Tigre : Je grogne très fort !");
 
+		Log.log(Log.LOG_DEBUG, "Tigre::crier() [end]");
+	} 
 }

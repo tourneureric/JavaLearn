@@ -1,19 +1,25 @@
 package com.tourneureric.javalearn002;
 
-public class Lion extends Animal {
+public class Lion extends Felin {
 
-	@Override
-	void deplacement() {
-		Log.log(Log.LOG_DEBUG, "Lion::deplacement() [begin]");
+	public Lion() {
+		Log.log(Log.LOG_DEBUG, "Lion::Lion() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "Lion::deplacement() [end]");
+		P.print("Lion : instanciation");
+
+		Log.log(Log.LOG_DEBUG, "Lion::Lion() [end]");
 	}
-	
-	@Override
+
+	public Lion(String couleur, int poids) {
+		this.couleur = couleur;
+		this.poids = poids;
+	}       
+
 	void crier() {
 		Log.log(Log.LOG_DEBUG, "Lion::crier() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "Lion::crier() [end]");
-	}
+		P.print("Lion : Je rugis dans la savane !");
 
+		Log.log(Log.LOG_DEBUG, "Lion::crier() [end]");
+	} 
 }
