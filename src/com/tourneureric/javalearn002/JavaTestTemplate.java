@@ -50,6 +50,8 @@ public class JavaTestTemplate {
 	public JavaTestTemplate () {
 
 		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [begin]");
+		
+		P.print("JavaTestTemplate : instanciation");
 
 		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [end]");
 

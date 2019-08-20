@@ -78,6 +78,8 @@ public class JavaTest015 {
 	public JavaTest015 () {
 
 		Log.log(Log.LOG_DEBUG, "JavaTest015::JavaTest015() [begin]");
+		
+		P.print("JavaTest015 : instanciation");
 
 		Log.log(Log.LOG_DEBUG, "JavaTest015::JavaTest015() [end]");
 

@@ -11,8 +11,14 @@ public class Chien extends Canin implements Rintintin {
 	}
 
 	public Chien(String couleur, int poids) {
+		Log.log(Log.LOG_DEBUG, "Chien::Chien(String couleur, int poids) [begin]");
+		
+		P.print("Chien(String couleur, int poids) : instanciation");
+
 		this.couleur = couleur;
 		this.poids = poids;
+		
+		Log.log(Log.LOG_DEBUG, "Chien::Chien(String couleur, int poids) [end]");
 	}       
 
 	void crier() {
