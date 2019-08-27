@@ -1,4 +1,3 @@
-
 package com.tourneureric.javalearn003;
 
 import java.util.Scanner;
