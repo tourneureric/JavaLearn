@@ -9,17 +9,17 @@ public class JavaTest001 {
 
 	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::doit() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest001::doit() [begin]");
 		
 		P.print("OK this is it !");
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::doit() [end]");
+		Log.log(Log.LOG_DEBUG, "JavaTest001::doit() [end]");
 
 	}
 
 	public void main() {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::main() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest001::main() [begin]");
 
 		if (JavaLearn.JL_RUN) {
 
@@ -43,7 +43,7 @@ public class JavaTest001 {
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
 
-			Log.log(Log.LOG_DEBUG, "JavaTestTemplate::main() [end]");
+			Log.log(Log.LOG_DEBUG, "JavaTest001::main() [end]");
 
 		}
 
@@ -51,11 +51,11 @@ public class JavaTest001 {
 
 	public JavaTest001 () {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [begin]");
+		Log.log(Log.LOG_DEBUG, "JavaTest001::JavaTest001() [begin]");
 		
-		P.print("JavaTestTemplate : instanciation");
+		P.print("JavaTest001 : instanciation");
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [end]");
+		Log.log(Log.LOG_DEBUG, "JavaTest001::JavaTest001() [end]");
 
 	}
 
