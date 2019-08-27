@@ -8,17 +8,26 @@ public class JavaTest001 {
 
 	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, "JavaTest001::doit() [begin]");
-		
-		P.print("OK this is it !");
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "JavaTest001::doit() [end]");
+		Personnage[] tPers = {new Guerrier(), new Chirurgien(), new Civil(), new Sniper(), new Medecin()};
+		
+		for (Personnage p : tPers) {
+			P.print("\nInstance de " + p.getClass().getName());
+			P.print("***************************************");
+			p.combattre();
+			p.seDeplacer();
+			p.soigner();
+		}
+		P.print("");
+
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
 	}
 
 	public void main() {
 
-		Log.log(Log.LOG_DEBUG, "JavaTest001::main() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::main() [begin]");
 
 		if (JavaLearn.JL_RUN) {
 
@@ -42,7 +51,7 @@ public class JavaTest001 {
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
 
-			Log.log(Log.LOG_DEBUG, "JavaTest001::main() [end]");
+			Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::main() [end]");
 
 		}
 
@@ -50,11 +59,11 @@ public class JavaTest001 {
 
 	public JavaTest001 () {
 
-		Log.log(Log.LOG_DEBUG, "JavaTest001::JavaTest001() [begin]");
-		
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::" + this.getClass().getSimpleName() + "[begin]");
+
 		P.print("JavaTest001 : instanciation");
 
-		Log.log(Log.LOG_DEBUG, "JavaTest001::JavaTest001() [end]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::" + this.getClass().getSimpleName() + "[end]");
 
 	}
 

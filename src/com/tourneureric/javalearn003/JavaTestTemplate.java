@@ -1,4 +1,3 @@
-
 package com.tourneureric.javalearn003;
 
 import java.util.Scanner;
@@ -9,15 +8,15 @@ public class JavaTestTemplate {
 
 	private void doit() {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::doit() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [begin]");
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::doit() [end]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
 	}
 
 	public void main() {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::main() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::main() [begin]");
 
 		if (JavaLearn.JL_RUN) {
 
@@ -41,7 +40,7 @@ public class JavaTestTemplate {
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
 
-			Log.log(Log.LOG_DEBUG, "JavaTestTemplate::main() [end]");
+			Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::main() [end]");
 
 		}
 
@@ -49,11 +48,11 @@ public class JavaTestTemplate {
 
 	public JavaTestTemplate () {
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [begin]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::" + this.getClass().getSimpleName() + "[begin]");
 		
 		P.print("JavaTestTemplate : instanciation");
 
-		Log.log(Log.LOG_DEBUG, "JavaTestTemplate::JavaTestTemplate() [end]");
+		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::" + this.getClass().getSimpleName() + "[end]");
 
 	}
 
