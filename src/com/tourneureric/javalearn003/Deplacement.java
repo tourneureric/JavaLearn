@@ -1,9 +1,7 @@
-package com.tourneureric.javalearn003.comportement;
-
-import com.tourneureric.javalearn003.*;
+package com.tourneureric.javalearn003;
 
 public interface Deplacement {
-	
+
 	public void deplacer();
 	Marcher marcher = null;
 	Courir courir = null;

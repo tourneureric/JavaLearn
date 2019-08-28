@@ -1,6 +1,4 @@
-package com.tourneureric.javalearn003.comportement;
-
-import com.tourneureric.javalearn003.*;
+package com.tourneureric.javalearn003;
 
 public class AucunSoin implements Soin {
 	public void soigner() {

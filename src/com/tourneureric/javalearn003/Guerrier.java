@@ -1,7 +1,5 @@
 package com.tourneureric.javalearn003;
 
-import com.tourneureric.javalearn003.comportement.*;
-
 public class Guerrier extends Personnage {	
 	public Guerrier(){
 		this.espritCombatif = new CombatPistolet();

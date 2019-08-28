@@ -49,7 +49,7 @@ public class JavaTestTemplate {
 	public JavaTestTemplate () {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::" + this.getClass().getSimpleName() + "[begin]");
-		
+
 		P.print("JavaTestTemplate : instanciation");
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::" + this.getClass().getSimpleName() + "[end]");
