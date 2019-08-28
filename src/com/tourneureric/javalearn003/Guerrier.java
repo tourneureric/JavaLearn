@@ -1,11 +1,13 @@
 package com.tourneureric.javalearn003;
 
 public class Guerrier extends Personnage {
+
 	public void combattre() {
-		System.out.println("Fusil, pistolet, couteau ! Tout ce que tu veux !");
-	}
-	
-	public void soigner() {
-		System.out.println("Je prodigue les premiers soins.");
+		if(this.armes.equals("pistolet"))
+			P.print("Attaque au pistolet !");
+		else if(this.armes.equals("fusil de sniper"))
+			P.print("Attaque au fusil de sniper !");
+		else
+			P.print("Attaque au couteau !");
 	}
 }

@@ -11,13 +11,16 @@ public class JavaTest001 {
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [begin]");
 
 		Personnage[] tPers = {new Guerrier(), new Chirurgien(), new Civil(), new Sniper(), new Medecin()};
-		
-		for (Personnage p : tPers) {
-			P.print("\nInstance de " + p.getClass().getName());
-			P.print("***************************************");
-			p.combattre();
-			p.seDeplacer();
-			p.soigner();
+		String[] tArmes = {"pistolet", "pistolet", "couteau", "fusil à pompe", "couteau"}; 
+
+		for(int i = 0; i < tPers.length; i++){
+			P.print("\nInstance de " + tPers[i].getClass().getName());
+			P.print("*****************************************");
+			tPers[i].combattre();
+			tPers[i].setArmes(tArmes[i]);
+			tPers[i].combattre();
+			tPers[i].seDeplacer();
+			tPers[i].soigner();
 		}
 		P.print("");
 

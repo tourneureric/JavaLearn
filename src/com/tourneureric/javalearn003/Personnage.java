@@ -1,17 +1,32 @@
 package com.tourneureric.javalearn003;
 
 public abstract class Personnage {
-	
+
+	protected String armes = "";
+	protected String chaussure = "";
+	protected String sacDeSoin = "";
+
 	public void seDeplacer(){
-		System.out.println("Je me déplace à pied.");
+		P.print("Je me déplace à pied.");
 	}
-	
+
 	public void combattre(){
-		System.out.println("Je ne combats PAS !");
+		P.print("Je ne combats PAS !");
 	}
-	
+
 	public void soigner(){
-		System.out.println("Je ne soigne pas.");
+		P.print("Je ne soigne pas.");
 	}
-	
+
+	protected void setArmes(String armes) {
+		this.armes = armes;
+	}
+
+	protected void setChaussure(String chaussure) {
+		this.chaussure = chaussure;
+	}
+
+	protected void setSacDeSoin(String sacDeSoin) {
+		this.sacDeSoin = sacDeSoin;
+	}
 }
