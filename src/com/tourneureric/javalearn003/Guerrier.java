@@ -1,13 +1,12 @@
 package com.tourneureric.javalearn003;
 
-public class Guerrier extends Personnage {
+import com.tourneureric.javalearn003.comportement.*;
 
-	public void combattre() {
-		if(this.armes.equals("pistolet"))
-			P.print("Attaque au pistolet !");
-		else if(this.armes.equals("fusil de sniper"))
-			P.print("Attaque au fusil de sniper !");
-		else
-			P.print("Attaque au couteau !");
+public class Guerrier extends Personnage {	
+	public Guerrier(){
+		this.espritCombatif = new CombatPistolet();
+	}
+	public Guerrier(EspritCombatif esprit, Soin soin, Deplacement dep) {
+		super(esprit, soin, dep);
 	}
 }

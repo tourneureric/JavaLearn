@@ -1,10 +1,12 @@
 package com.tourneureric.javalearn003;
 
+import com.tourneureric.javalearn003.comportement.*;
+
+
 public class Civil extends Personnage{
-	public void combattre(){
-		if(this.armes.equals("couteau"))
-			P.print("Attaque au couteau !");
-		else
-			P.print("Je ne combats PAS !");
+	  public Civil() {}
+
+	  public Civil(EspritCombatif esprit, Soin soin, Deplacement dep) {
+	    super(esprit, soin, dep);
+	  }	
 	}
-}

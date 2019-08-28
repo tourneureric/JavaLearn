@@ -1,32 +1,54 @@
 package com.tourneureric.javalearn003;
 
+import com.tourneureric.javalearn003.comportement.*;
+
 public abstract class Personnage {
 
-	protected String armes = "";
-	protected String chaussure = "";
-	protected String sacDeSoin = "";
+  //Nos instances de comportement
+  protected EspritCombatif espritCombatif = new Pacifiste();
+  protected Soin soin = new AucunSoin();
+  protected Deplacement deplacement = new Marcher();	
+	
+  //Constructeur par défaut
+  public Personnage(){}
+	
+  //Constructeur avec paramètres
+  public Personnage(EspritCombatif espritCombatif, Soin soin, Deplacement deplacement) {
+    this.espritCombatif = espritCombatif;
+    this.soin = soin;
+    this.deplacement = deplacement;
+  }
+	
+  //Méthode de déplacement de personnage
+  public void seDeplacer(){
+    //On utilise les objets de déplacement de façon polymorphe
+    deplacement.deplacer();
+  }
 
-	public void seDeplacer(){
-		P.print("Je me déplace à pied.");
-	}
+  // Méthode que les combattants utilisent
+  public void combattre(){
+    //On utilise les objets de déplacement de façon polymorphe
+    espritCombatif.combat();
+  }
+	
+  //Méthode de soin
+  public void soigner(){
+    //On utilise les objets de déplacement de façon polymorphe
+    soin.soigner();
+  }
 
-	public void combattre(){
-		P.print("Je ne combats PAS !");
-	}
+  //Redéfinit le comportement au combat
+  public void setEspritCombatif(EspritCombatif espritCombatif) {
+    this.espritCombatif = espritCombatif;
+  }
 
-	public void soigner(){
-		P.print("Je ne soigne pas.");
-	}
+  //Redéfinit le comportement de Soin
+  public void setSoin(Soin soin) {
+    this.soin = soin;
+  }
 
-	protected void setArmes(String armes) {
-		this.armes = armes;
-	}
-
-	protected void setChaussure(String chaussure) {
-		this.chaussure = chaussure;
-	}
-
-	protected void setSacDeSoin(String sacDeSoin) {
-		this.sacDeSoin = sacDeSoin;
-	}
+  //Redéfinit le comportement de déplacement
+  public void setDeplacement(Deplacement deplacement) {
+    this.deplacement = deplacement;
+  }	
 }

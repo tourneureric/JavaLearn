@@ -1,17 +1,12 @@
 package com.tourneureric.javalearn003;
 
-public class Medecin extends Personnage{
-	public void combattre() {
-		if(this.armes.equals("pistolet"))
-			P.print("Attaque au pistolet !");
-		else
-			P.print("Vive le scalpel !");
-	}
+import com.tourneureric.javalearn003.comportement.*;
 
-	public void soigner(){
-		if(this.sacDeSoin.equals("petit sac"))
-			P.print("Je peux recoudre des blessures.");
-		else
-			P.print("Je soigne les blessures.");
+public class Medecin extends Personnage{
+	public Medecin() {
+		this.soin = new PremierSoin();
 	}
+	public Medecin(EspritCombatif esprit, Soin soin, Deplacement dep) {
+		super(esprit, soin, dep);
+	}	
 }
