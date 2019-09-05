@@ -13,7 +13,11 @@ public class JavaTest001 {
 		Reproduction.description();
 		Pondre.description();
 		Mitose.description();
-		
+
+		Alien alien = new Alien();
+		alien.reproduire();
+		alien.penser();
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
 	}
