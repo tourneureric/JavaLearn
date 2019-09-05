@@ -10,6 +10,10 @@ public class JavaTest001 {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [begin]");
 
+		Reproduction.description();
+		Pondre.description();
+		Mitose.description();
+		
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
 	}
