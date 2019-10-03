@@ -13,11 +13,9 @@ public class JavaTest003 {
 		Ville v = null;
 		try {
 			Log.log(Log.LOG_TRACE, "JavaTest003::doit() try");
-			v = new Ville("Re", 12000, "France");
-		} catch (NombreHabitantException e) {
-			Log.log(Log.LOG_TRACE, "JavaTest003::doit() catch NombreHabitantException => '" + e.getMessage() + "'");
-		} catch (NomVilleException e) {
-			Log.log(Log.LOG_TRACE, "JavaTest003::doit() catch NomVilleException => '" + e.getMessage() + "'");
+			v = new Ville("Re", -12000, "France");
+		} catch (NombreHabitantException | NomVilleException e) {
+			Log.log(Log.LOG_TRACE, "JavaTest003::doit() catch NombreHabitantException | NomVilleException '" + e.getMessage() + "'");
 		}
 		finally {
 			Log.log(Log.LOG_TRACE, "JavaTest003::doit() finally");
