@@ -46,17 +46,17 @@ public class Capitale extends Ville {
 		super();
 		Log.log(Log.LOG_DEBUG, "Capitale::Capitale() [begin]");
 
-		Log.log(Log.LOG_TRACE, "Creéation d'une capitale !");
+		Log.log(Log.LOG_TRACE, "Capitale::Capitale() Création d'une capitale !");
 		monument = "Aucun";
 
 		Log.log(Log.LOG_DEBUG, "Capitale::Capitale() [end]");
 	}
 
-	public Capitale(String pNom, int pNbre, String pPays, String pMonument) {
+	public Capitale(String pNom, int pNbre, String pPays, String pMonument) throws NombreHabitantException {
 		super(pNom, pNbre, pPays);
 		Log.log(Log.LOG_DEBUG, "Capitale::Capitale(String pNom, int pNbre, String pPays, String pMonument) [begin]");
 
-		Log.log(Log.LOG_TRACE, "Creéation d'une capitale avec des paramètres !");
+		Log.log(Log.LOG_TRACE, "Capitale::Capitale(String pNom, int pNbre, String pPays, String pMonument) Création d'une capitale avec des paramètres !");
 		monument = pMonument;
 
 		Log.log(Log.LOG_DEBUG, "Capitale::Capitale(String pNom, int pNbre, String pPays, String pMonument) [end]");

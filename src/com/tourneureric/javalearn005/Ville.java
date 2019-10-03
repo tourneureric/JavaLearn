@@ -79,7 +79,7 @@ public class Ville {
 	public Ville() {
 		Log.log(Log.LOG_DEBUG, "Ville::Ville() [begin]");
 
-		Log.log(Log.LOG_TRACE, "Creéation d'une ville !");
+		Log.log(Log.LOG_TRACE, "Ville::Ville() Creéation d'une ville !");
 		nbreInstances++;
 		nbreInstancesBis++;
 		nomVille = "Inconnu";
@@ -90,16 +90,21 @@ public class Ville {
 		Log.log(Log.LOG_DEBUG, "Ville::Ville() [end]");
 	}
 
-	public Ville(String pNom, int pNbre, String pPays) {
+	public Ville(String pNom, int pNbre, String pPays) throws NombreHabitantException {
 		Log.log(Log.LOG_DEBUG, "Ville::Ville(String pNom, int pNbre, String pPays) [begin]");
 
-		Log.log(Log.LOG_TRACE, "Creéation d'une ville avec des paramètres !");
-		nbreInstances++;
-		nbreInstancesBis++;
-		nomVille = pNom;
-		nomPays = pPays;
-		nbreHabitants = pNbre;
-		this.setCategorie();
+		Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) Création d'une ville avec des paramètres !");
+		if (pNbre < 0) {
+			Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) pNbre < 0");
+			throw new NombreHabitantException();
+		} else {
+			nbreInstances++;
+			nbreInstancesBis++;
+			nomVille = pNom;
+			nomPays = pPays;
+			nbreHabitants = pNbre;
+			this.setCategorie();
+		}
 
 		Log.log(Log.LOG_DEBUG, "Ville::Ville(String pNom, int pNbre, String pPays) [end]");
 	}
