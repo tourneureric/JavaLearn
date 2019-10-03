@@ -96,7 +96,7 @@ public class Ville {
 		Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) Création d'une ville avec des paramètres !");
 		if (pNbre < 0) {
 			Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) pNbre < 0");
-			throw new NombreHabitantException();
+			throw new NombreHabitantException(pNbre);
 		} else {
 			nbreInstances++;
 			nbreInstancesBis++;
