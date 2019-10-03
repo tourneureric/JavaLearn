@@ -7,7 +7,7 @@ public class Log {
 	public static final int LOG_DEBUG = 3;
 
 	private static final boolean LOG_ON = true;
-	private static final int LOG_LEVEL = LOG_DEBUG;
+	private static final int LOG_LEVEL = LOG_TRACE;
 
 	public static final void log(int pLevel, String pText) {
 		if (LOG_ON && pLevel <= LOG_LEVEL) {
