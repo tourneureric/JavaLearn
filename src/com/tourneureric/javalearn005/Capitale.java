@@ -52,7 +52,7 @@ public class Capitale extends Ville {
 		Log.log(Log.LOG_DEBUG, "Capitale::Capitale() [end]");
 	}
 
-	public Capitale(String pNom, int pNbre, String pPays, String pMonument) throws NombreHabitantException {
+	public Capitale(String pNom, int pNbre, String pPays, String pMonument) throws NombreHabitantException, NomVilleException {
 		super(pNom, pNbre, pPays);
 		Log.log(Log.LOG_DEBUG, "Capitale::Capitale(String pNom, int pNbre, String pPays, String pMonument) [begin]");
 

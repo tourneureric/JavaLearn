@@ -12,6 +12,7 @@ class NombreHabitantException extends Exception {
 	}
 
 	public NombreHabitantException(int nbre) {
+		super (nbre + " < 0");
 		Log.log(Log.LOG_DEBUG, "NombreHabitantException::NombreHabitantException(int nbre) [begin]");
 
 		Log.log(Log.LOG_TRACE, "NombreHabitantException::NombreHabitantException(int nbre) Instanciation avec un nombre d'habitants négatif.");

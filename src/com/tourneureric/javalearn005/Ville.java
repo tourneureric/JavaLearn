@@ -90,13 +90,16 @@ public class Ville {
 		Log.log(Log.LOG_DEBUG, "Ville::Ville() [end]");
 	}
 
-	public Ville(String pNom, int pNbre, String pPays) throws NombreHabitantException {
+	public Ville(String pNom, int pNbre, String pPays) throws NombreHabitantException, NomVilleException {
 		Log.log(Log.LOG_DEBUG, "Ville::Ville(String pNom, int pNbre, String pPays) [begin]");
 
 		Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) Création d'une ville avec des paramètres !");
 		if (pNbre < 0) {
 			Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) pNbre < 0");
 			throw new NombreHabitantException(pNbre);
+		} else if (pNom.length() < 3) {
+			Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) pNbre < 3");
+			throw new NomVilleException("le nom de la ville est inférieur à 3 caractères ! nom = " + pNom);
 		} else {
 			nbreInstances++;
 			nbreInstancesBis++;
