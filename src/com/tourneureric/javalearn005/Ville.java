@@ -98,7 +98,7 @@ public class Ville {
 			Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) pNbre < 0");
 			throw new NombreHabitantException(pNbre);
 		} else if (pNom.length() < 3) {
-			Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) pNbre < 3");
+			Log.log(Log.LOG_TRACE, "Ville::Ville(String pNom, int pNbre, String pPays) pNom.length() < 3");
 			throw new NomVilleException("le nom de la ville est inférieur à 3 caractères ! nom = " + pNom);
 		} else {
 			nbreInstances++;
