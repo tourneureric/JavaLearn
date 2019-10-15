@@ -1,4 +1,4 @@
-package com.tourneureric.javalearntemplate;
+package com.tourneureric.javalearn007;
 
 public class P {
 
