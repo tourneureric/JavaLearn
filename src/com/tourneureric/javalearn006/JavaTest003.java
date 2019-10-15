@@ -24,6 +24,28 @@ public class JavaTest003 {
 		affiche(listVoiture);
 		affiche(listVoitureSP);
 
+		//Liste de voiture
+		List<Voiture> listVoiture2 = new ArrayList<Voiture>();
+		listVoiture2.add(new Voiture());
+		listVoiture2.add(new Voiture());
+
+		List<Object> listVoitureSP2 = new ArrayList<Object>();
+		listVoitureSP2.add(new Object());
+		listVoitureSP2.add(new Object());
+
+		affiche2(listVoiture2);
+
+		List<Voiture> listVoiture3 = new ArrayList<Voiture>();
+		listVoiture3.add(new Voiture("Renault", "Captur", 20000));
+
+		List<VoitureSansPermis> listVoitureSP3 = new ArrayList<VoitureSansPermis>();
+		listVoitureSP3.add(new VoitureSansPermis("Honda", "KK", 5000, 80));
+
+		Garage garage = new Garage();
+		garage.add(listVoiture3);
+		System.out.println("--------------------------");
+		garage.add(listVoitureSP3);	
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
 	}
@@ -31,6 +53,13 @@ public class JavaTest003 {
 	static void affiche(List<? extends Voiture> list){
 
 		for(Voiture v : list)
+			System.out.println(v.toString());
+
+	}
+
+	static void affiche2(List<? super Voiture> list){
+
+		for(Object v : list)
 			System.out.println(v.toString());
 
 	}
