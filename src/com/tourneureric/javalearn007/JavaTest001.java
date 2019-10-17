@@ -1,6 +1,7 @@
 package com.tourneureric.javalearn007;
 
 import java.util.Scanner;
+import java.io.File;
 
 public class JavaTest001 {
 
@@ -9,6 +10,32 @@ public class JavaTest001 {
 	private void doit() {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [begin]");
+		
+		File f = new File("test.txt");
+		P.print("Chemin absolu du fichier : " + f.getAbsolutePath());
+		P.print("Nom du fichier : " + f.getName());
+		P.print("Est-ce qu'il existe : " + f.exists());
+		P.print("Est-ce un répertoire : " + f.isDirectory());
+		P.print("Est-ce un fichier : " + f.isFile());
+		
+		P.print("Affichage des lecteurs à la racine de du PC :");
+		for (File file : f.listRoots()) {
+			P.print(file.getAbsolutePath());
+			try {
+				int i = 1;
+				for (File nom : file.listFiles()) {
+					P.print("\t\t" + ((nom.isDirectory() ? nom.getName()+"/" : nom.getName())));
+					
+					if (i%4 == 0) {
+						P.print("");
+					}
+					i++;
+				}
+				P.print("");
+			} catch (NullPointerException e) {
+				
+			}
+		}
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
