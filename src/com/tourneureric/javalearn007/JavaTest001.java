@@ -12,26 +12,26 @@ public class JavaTest001 {
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [begin]");
 		
 		File f = new File("test.txt");
-		P.print("Chemin absolu du fichier : " + f.getAbsolutePath());
-		P.print("Nom du fichier : " + f.getName());
-		P.print("Est-ce qu'il existe : " + f.exists());
-		P.print("Est-ce un répertoire : " + f.isDirectory());
-		P.print("Est-ce un fichier : " + f.isFile());
+		P.println("Chemin absolu du fichier : " + f.getAbsolutePath());
+		P.println("Nom du fichier : " + f.getName());
+		P.println("Est-ce qu'il existe : " + f.exists());
+		P.println("Est-ce un répertoire : " + f.isDirectory());
+		P.println("Est-ce un fichier : " + f.isFile());
 		
-		P.print("Affichage des lecteurs à la racine de du PC :");
+		P.println("Affichage des lecteurs à la racine de du PC :");
 		for (File file : f.listRoots()) {
-			P.print(file.getAbsolutePath());
+			P.println(file.getAbsolutePath());
 			try {
 				int i = 1;
 				for (File nom : file.listFiles()) {
-					P.print("\t\t" + ((nom.isDirectory() ? nom.getName()+"/" : nom.getName())));
+					P.println("\t\t" + ((nom.isDirectory() ? nom.getName()+"/" : nom.getName())));
 					
 					if (i%4 == 0) {
-						P.print("");
+						P.println("");
 					}
 					i++;
 				}
-				P.print("");
+				P.println("");
 			} catch (NullPointerException e) {
 				
 			}
@@ -57,12 +57,12 @@ public class JavaTest001 {
 
 					doit();
 
-					P.print("Voulez-vous continuer (o/n) ?");
+					P.println("Voulez-vous continuer (o/n) ?");
 					again = sc.nextLine();
 
 				} while (again.equalsIgnoreCase("o"));
 
-				P.print("Fin");
+				P.println("Fin");
 				sc.close();
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
