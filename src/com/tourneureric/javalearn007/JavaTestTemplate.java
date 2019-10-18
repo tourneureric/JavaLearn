@@ -30,12 +30,12 @@ public class JavaTestTemplate {
 
 					doit();
 
-					P.print("Voulez-vous continuer (o/n) ?");
+					P.println("Voulez-vous continuer (o/n) ?");
 					again = sc.nextLine();
 
 				} while (again.equalsIgnoreCase("o"));
 
-				P.print("Fin");
+				P.println("Fin");
 				sc.close();
 
 			} catch (Exception e) { Log.error("in main()"); throw e; }
