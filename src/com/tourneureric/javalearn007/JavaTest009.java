@@ -10,6 +10,13 @@ public class JavaTest009 {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [begin]");
 
+		Patisserie pat = new CoucheChocolat(
+				new CoucheCaramel(
+						new CoucheBiscuit(
+								new CoucheChocolat(
+										new Gateau()))));
+		System.out.println(pat.preparer());
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
 	}
