@@ -6,11 +6,13 @@ public class Game implements Serializable {
 
 	private String nom, style;
 	private double prix;
+	private transient Notice notice;
 
 	public Game(String nom, String style, double prix) {
 		this.nom = nom;
 		this.style = style;
 		this.prix = prix;
+		this.notice = new Notice();
 	}
 
 	public String toString() {
