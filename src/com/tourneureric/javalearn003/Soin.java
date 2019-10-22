@@ -1,9 +1,9 @@
 package com.tourneureric.javalearn003;
 
+@FunctionalInterface
 public interface Soin {
-
 	public void soigner();
-	PremierSoin premierSoin = null;
-	Operation operation = null;
-
+	public default String toto(int i) {
+		return "Tout est OK !";
+	};
 }
