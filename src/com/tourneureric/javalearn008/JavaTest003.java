@@ -10,6 +10,23 @@ public class JavaTest003 {
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [begin]");
 
+		P.println("================================================================================");
+
+		Dialoguer d1 = new Dialoguer() {
+			public Integer parler(String question) {
+				P.println("Tu as dis : " + question);	
+				return 1;
+			}
+		};
+		Integer i1 = d1.parler("Bonjour");
+		P.println("i1 = " + i1);
+		
+		P.println("================================================================================");
+
+		Dialoguer d2 = (s) -> { P.println("Tu as dis : " + s); return 2; };
+		Integer i2 = d2.parler("Bonjour");
+		P.println("i2 = " + i2);
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
 	}
