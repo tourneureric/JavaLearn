@@ -15,5 +15,11 @@ public class P {
 			System.out.println(pObject);
 		}
 	}
+	
+	public static final void printline() {
+		if (PRINT_ON) {
+			System.out.println("================================================================================");
+		}
+	}
 
 }

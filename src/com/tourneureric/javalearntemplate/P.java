@@ -9,10 +9,16 @@ public class P {
 			System.out.print(pObject);
 		}
 	}
-	
+
 	public static final void println(Object pObject) {
 		if (PRINT_ON) {
 			System.out.println(pObject);
+		}
+	}
+
+	public static final void printline() {
+		if (PRINT_ON) {
+			System.out.println("================================================================================");
 		}
 	}
 
