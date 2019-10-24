@@ -3,6 +3,9 @@ package com.tourneureric.javalearn009;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -64,8 +67,8 @@ public class JavaTest001 {
 		sp = listP.stream();
 
 		Optional<Double> sum2 = sp	.filter(x -> x.getPoids() > 250)
-									.map(x -> x.getPoids())
-									.reduce((x,y) -> x+y);
+				.map(x -> x.getPoids())
+				.reduce((x,y) -> x+y);
 		if(sum2.isPresent())
 			System.out.println(sum2.get());
 		else
@@ -76,20 +79,29 @@ public class JavaTest001 {
 		sp = listP.stream();
 
 		long count = sp	.filter(x -> x.getPoids() > 50)
-						.map(x -> x.getPoids())
-						.count();
+				.map(x -> x.getPoids())
+				.count();
 
 		System.out.println("Nombre d'éléments : " + count);
 
 		P.printline();
-		
+
 		sp = listP.stream();
 
 		List<Double> ld = sp.filter(x -> x.getPoids() > 50)
-							.map(x -> x.getPoids())
-							.collect(Collectors.toList());
+				.map(x -> x.getPoids())
+				.collect(Collectors.toList());
 		P.println(ld);
-		
+
+		P.printline();
+
+		String fileName = "C://Temp/Test.txt";
+		try (Stream<String> sf = Files.lines(Paths.get(fileName))) {
+			sf.forEach(P::println);
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+
 		P.printline();
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
