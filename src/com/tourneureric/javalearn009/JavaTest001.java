@@ -1,9 +1,11 @@
 package com.tourneureric.javalearn009;
 
 import java.util.Scanner;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class JavaTest001 {
 
@@ -39,22 +41,54 @@ public class JavaTest001 {
 		sp.filter(x -> x.getPoids() > 50).forEach(P::println);
 
 		P.printline();
-		
+
 		System.out.println("\nAprès le filtre et le map");
 		sp = listP.stream();
 		sp.	filter(x -> x.getPoids() > 50)
-			.map(x -> "IMC = " + x.getPoids() / Math.pow(x.getTaille(), 2))
-			.forEach(P::println);
-		
+		.map(x -> "IMC = " + x.getPoids() / Math.pow(x.getTaille(), 2))
+		.forEach(P::println);
+
 		P.printline();
 
 		P.println("\nAprès le filtre et le map et reduce");
 		sp = listP.stream();
 
 		Double sum = sp.filter(x -> x.getPoids() > 50)
-						.map(x -> x.getPoids())
-						.reduce(0.0d, (x,y) -> x+y);
+				.map(x -> x.getPoids())
+				.reduce(0.0d, (x,y) -> x+y);
 		P.println(sum);
+
+		P.printline();
+
+		P.println("\nAprès le filtre et le map et reduce");
+		sp = listP.stream();
+
+		Optional<Double> sum2 = sp	.filter(x -> x.getPoids() > 250)
+									.map(x -> x.getPoids())
+									.reduce((x,y) -> x+y);
+		if(sum2.isPresent())
+			System.out.println(sum2.get());
+		else
+			System.out.println("Aucun aggrégat de poids...");
+
+		P.printline();
+
+		sp = listP.stream();
+
+		long count = sp	.filter(x -> x.getPoids() > 50)
+						.map(x -> x.getPoids())
+						.count();
+
+		System.out.println("Nombre d'éléments : " + count);
+
+		P.printline();
+		
+		sp = listP.stream();
+
+		List<Double> ld = sp.filter(x -> x.getPoids() > 50)
+							.map(x -> x.getPoids())
+							.collect(Collectors.toList());
+		P.println(ld);
 		
 		P.printline();
 
