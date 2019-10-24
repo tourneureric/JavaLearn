@@ -24,16 +24,21 @@ public class JavaTest001 {
 				);
 
 		P.printline();
-		
+
 		Stream<Personne> sp = listP.stream();
 		sp.forEach(P::println);
-		
-		P.printline();
-		
-		Stream.iterate(1, (x) -> x + 1).limit(10).forEach(System.out::println);
-		
+
 		P.printline();
 
+		Stream.iterate(2d, (x) -> x * 2).limit(10).forEach(System.out::println);
+
+		P.printline();
+
+		P.println("\nAprès le filtre");
+		sp = listP.stream();
+		sp.filter(x -> x.getPoids() > 50).forEach(P::println);
+
+		P.printline();
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
