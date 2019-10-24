@@ -39,6 +39,14 @@ public class JavaTest001 {
 		sp.filter(x -> x.getPoids() > 50).forEach(P::println);
 
 		P.printline();
+		
+		System.out.println("\nAprès le filtre et le map");
+		sp = listP.stream();
+		sp.	filter(x -> x.getPoids() > 50)
+			.map(x -> x.getPoids())
+			.forEach(P::println);
+		
+		P.printline();
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
