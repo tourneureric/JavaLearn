@@ -48,6 +48,16 @@ public class JavaTest001 {
 		
 		P.printline();
 
+		P.println("\nAprès le filtre et le map et reduce");
+		sp = listP.stream();
+
+		Double sum = sp.filter(x -> x.getPoids() > 50)
+						.map(x -> x.getPoids())
+						.reduce(0.0d, (x,y) -> x+y);
+		P.println(sum);
+		
+		P.printline();
+
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
 
 	}
