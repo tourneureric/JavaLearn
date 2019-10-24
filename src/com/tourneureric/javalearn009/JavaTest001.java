@@ -43,7 +43,7 @@ public class JavaTest001 {
 		System.out.println("\nAprès le filtre et le map");
 		sp = listP.stream();
 		sp.	filter(x -> x.getPoids() > 50)
-			.map(x -> x.getPoids())
+			.map(x -> "IMC = " + x.getPoids() / Math.pow(x.getTaille(), 2))
 			.forEach(P::println);
 		
 		P.printline();
