@@ -1,5 +1,8 @@
 package com.tourneureric.javalearn009;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.time.DayOfWeek;
 import java.time.Duration;
@@ -8,6 +11,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.Period;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 
@@ -88,6 +92,30 @@ public class JavaTest002 {
 				.with(TemporalAdjusters.next(DayOfWeek.TUESDAY)); 
 		P.println("Troisième mardi : " + troisiemeMardi);
 
+		P.printline();
+		
+		Map<String, String> maps = ZoneId.SHORT_IDS;
+		maps.values().stream().forEach((x) -> {P.println(x + " -- " + ZoneId.of(x).getRules());});
+		
+		//Et connaître notre fuseau
+		P.println("");
+		P.println("Fuseau horaire courant : "+ZoneId.systemDefault());
+		P.println("Règle appliquer aux heures : " + ZoneId.systemDefault().getRules());
+		
+		P.printline();
+		
+		LocalDateTime ldt6 = LocalDateTime.parse("2018-01-01T01:33:00");
+		List<ZoneId> lzi = Arrays.asList(
+				ZoneId.of("Europe/Paris"),
+				ZoneId.of("Asia/Tokyo"),
+				ZoneId.of("America/Anchorage")
+		);
+
+		lzi	.stream()
+			.forEach((x) -> {
+				P.println(x + " : \t" + ldt6.atZone(x).toInstant());
+			});
+		
 		P.printline();
 
 		Log.log(Log.LOG_DEBUG, this.getClass().getSimpleName() + "::doit() [end]");
