@@ -1,6 +1,7 @@
 package com.tourneureric.javalearn009;
 
 import java.util.Scanner;
+import java.time.DayOfWeek;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -8,6 +9,7 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
 
 public class JavaTest002 {
 
@@ -57,12 +59,34 @@ public class JavaTest002 {
 		LocalDateTime ldt1 = LocalDateTime.of(2018, Month.DECEMBER, 25, 13, 37, 0);
 		LocalDateTime ldt2 = ldt1.plus(3, ChronoUnit.YEARS);
 		LocalDateTime ldt3 = ldt1.minusMinutes(1337);
-		
+
 		Period p = Period.between(ldt1.toLocalDate(), ldt2.toLocalDate());
 		Duration d = Duration.between(ldt1.toLocalTime(), ldt3.toLocalTime());
 		P.println("Période : " + p.getYears());
 		P.println("Durée : " + d.getSeconds());
 		P.println("Ecart en jour : " + ChronoUnit.DAYS.between(ldt1, ldt2));
+
+		P.printline();
+
+		LocalDate ldt4 = LocalDate.of(2018, Month.DECEMBER, 25);
+
+		//Le prochain samedi
+		LocalDate prochainSamedi = ldt4.with(TemporalAdjusters.next(DayOfWeek.SATURDAY));
+		P.println("Prochain samedi : " + prochainSamedi);
+
+		//Le troisième mardi du mois suivant
+		//On ajoute un mois à notre date
+		ldt4 = ldt4.plus(1, ChronoUnit.MONTHS);
+		//On en créer une nouvelle au premier jour du mois
+		LocalDate ldt5 = LocalDate.of(ldt4.getYear(), ldt4.getMonth(), 1);
+		//On avance de trois mardi
+		LocalDate troisiemeMardi = String.valueOf(ldt5.getDayOfWeek()).equals("TUESDAY") ? 
+				ldt5
+				.with(TemporalAdjusters.next(DayOfWeek.TUESDAY)) 
+				.with(TemporalAdjusters.next(DayOfWeek.TUESDAY)) : ldt5.with(TemporalAdjusters.next(DayOfWeek.TUESDAY)) 
+				.with(TemporalAdjusters.next(DayOfWeek.TUESDAY)) 
+				.with(TemporalAdjusters.next(DayOfWeek.TUESDAY)); 
+		P.println("Troisième mardi : " + troisiemeMardi);
 
 		P.printline();
 
